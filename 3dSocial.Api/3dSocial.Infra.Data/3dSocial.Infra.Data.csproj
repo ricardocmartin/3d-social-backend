@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>_3dSocial.Infra.Data</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.30" />
+    <PackageReference Include="Dapper.Extensions.NetCore" Version="3.1.0" />
+    <PackageReference Include="DapperExtensions" Version="1.6.3" />
+    <PackageReference Include="MySql.Data" Version="8.0.19" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\3dSocial.Domain\3dSocial.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

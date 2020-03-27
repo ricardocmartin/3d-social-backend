@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>_3dSocial.Service</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="8.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\3dSocial.Domain\3dSocial.Domain.csproj" />
+    <ProjectReference Include="..\3dSocial.Infra.Data\3dSocial.Infra.Data.csproj" />
+  </ItemGroup>
+
+</Project>
