@@ -7,7 +7,7 @@ namespace _3dSocial.Infra.Data.Mapping
     {
         public UserClassMapper()
         {
-            Table("tb_demand");
+            Table("tb_user");
 
             Map(x => x.Id).Column("ID").Key(KeyType.Identity);
             Map(x => x.Created).Column("Created");

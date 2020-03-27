@@ -32,6 +32,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{6DB3
 		CreateDB.sql = CreateDB.sql
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3dSocial.Api.Test", "3dSocial.Api.Test\3dSocial.Api.Test.csproj", "{96097CF2-79E6-48D5-9FFC-88F0FC211D9D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -62,6 +64,10 @@ Global
 		{926E1370-5B94-4DA8-B23F-4D96C292F495}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{926E1370-5B94-4DA8-B23F-4D96C292F495}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{926E1370-5B94-4DA8-B23F-4D96C292F495}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96097CF2-79E6-48D5-9FFC-88F0FC211D9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96097CF2-79E6-48D5-9FFC-88F0FC211D9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96097CF2-79E6-48D5-9FFC-88F0FC211D9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96097CF2-79E6-48D5-9FFC-88F0FC211D9D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
