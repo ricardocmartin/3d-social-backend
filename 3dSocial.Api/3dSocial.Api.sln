@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3dSocial.Api", "3dSocial.Api\3dSocial.Api.csproj", "{EAD38133-7D67-46AC-B22D-A178034E49AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3dSocial.Api", "3dSocial.Api\3dSocial.Api.csproj", "{EAD38133-7D67-46AC-B22D-A178034E49AB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Application", "1 - Application", "{6C8455AD-5DD3-4A35-8CB5-CAC20DF280C8}"
 EndProject
@@ -17,22 +17,22 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 - Data", "4.1 - Data", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 - CrossCutting", "4.2 - CrossCutting", "{A59B0905-5297-46E7-BDE0-5BB957BC6A07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3dSocial.Application", "3dSocial.Application\3dSocial.Application.csproj", "{E01A3C93-DCA7-4344-B1BF-2454BCF1AFE1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3dSocial.Application", "3dSocial.Application\3dSocial.Application.csproj", "{E01A3C93-DCA7-4344-B1BF-2454BCF1AFE1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3dSocial.Domain", "3dSocial.Domain\3dSocial.Domain.csproj", "{889997DD-1A65-4543-AC0D-FB338EAE345E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3dSocial.Domain", "3dSocial.Domain\3dSocial.Domain.csproj", "{889997DD-1A65-4543-AC0D-FB338EAE345E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3dSocial.Service", "3dSocial.Service\3dSocial.Service.csproj", "{8D236CFD-9DB2-46C0-9B4E-0BD7F54DA4E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3dSocial.Service", "3dSocial.Service\3dSocial.Service.csproj", "{8D236CFD-9DB2-46C0-9B4E-0BD7F54DA4E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3dSocial.Infra.Data", "3dSocial.Infra.Data\3dSocial.Infra.Data.csproj", "{11EA9C98-950F-4A94-9D9E-292479340D9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3dSocial.Infra.Data", "3dSocial.Infra.Data\3dSocial.Infra.Data.csproj", "{11EA9C98-950F-4A94-9D9E-292479340D9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3dSocial.Infra.CrossCutting", "3dSocial.Infra.CrossCutting\3dSocial.Infra.CrossCutting.csproj", "{926E1370-5B94-4DA8-B23F-4D96C292F495}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3dSocial.Infra.CrossCutting", "3dSocial.Infra.CrossCutting\3dSocial.Infra.CrossCutting.csproj", "{926E1370-5B94-4DA8-B23F-4D96C292F495}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{6DB3523B-94D7-4D6B-A12C-E7C24E5A99AB}"
 	ProjectSection(SolutionItems) = preProject
 		CreateDB.sql = CreateDB.sql
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3dSocial.Api.Test", "3dSocial.Api.Test\3dSocial.Api.Test.csproj", "{96097CF2-79E6-48D5-9FFC-88F0FC211D9D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3dSocial.Api.Test", "3dSocial.Api.Test\3dSocial.Api.Test.csproj", "{F6B61A58-E529-46DB-9F55-A65CC5DBDAF5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -64,10 +64,10 @@ Global
 		{926E1370-5B94-4DA8-B23F-4D96C292F495}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{926E1370-5B94-4DA8-B23F-4D96C292F495}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{926E1370-5B94-4DA8-B23F-4D96C292F495}.Release|Any CPU.Build.0 = Release|Any CPU
-		{96097CF2-79E6-48D5-9FFC-88F0FC211D9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{96097CF2-79E6-48D5-9FFC-88F0FC211D9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{96097CF2-79E6-48D5-9FFC-88F0FC211D9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{96097CF2-79E6-48D5-9FFC-88F0FC211D9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6B61A58-E529-46DB-9F55-A65CC5DBDAF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6B61A58-E529-46DB-9F55-A65CC5DBDAF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6B61A58-E529-46DB-9F55-A65CC5DBDAF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6B61A58-E529-46DB-9F55-A65CC5DBDAF5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
