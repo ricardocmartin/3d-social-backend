@@ -28,6 +28,7 @@ namespace _3dSocial.Api
         }
 
         public IConfiguration Configuration { get; }
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -45,7 +46,7 @@ namespace _3dSocial.Api
             });
 
             services.AddCors(options => {
-                options.AddPolicy("AllowAll",
+                options.AddPolicy(MyAllowSpecificOrigins,
                     builder => {
                         builder.AllowAnyOrigin();
                     }
@@ -73,6 +74,9 @@ namespace _3dSocial.Api
             {
                 endpoints.MapControllers();
             });
+
+
+            app.UseCors(MyAllowSpecificOrigins);
 
             app.UseSwagger();
             app.UseSwaggerUI(c =>
