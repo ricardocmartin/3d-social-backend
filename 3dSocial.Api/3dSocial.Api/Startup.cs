@@ -28,7 +28,7 @@ namespace _3dSocial.Api
         }
 
         public IConfiguration Configuration { get; }
-        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+        readonly string MyAllowSpecificOrigins = "AllowAll";
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -37,14 +37,9 @@ namespace _3dSocial.Api
             services.AddTransient<IProjectFacade, ProjectFacade>();
             services.AddTransient<IDemandFacade, DemandFacade>();
             services.AddTransient<IUserFacade, UserFacade>();
-            
-            services.AddControllers();
 
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Values API", Version = "v1" });
-            });
-
+            services.AddCors();
+            /*
             services.AddCors(options => {
                 options.AddPolicy(MyAllowSpecificOrigins,
                     builder => {
@@ -54,6 +49,17 @@ namespace _3dSocial.Api
                     }
                 );
             });
+            */
+
+            services.AddControllers();
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Values API", Version = "v1" });
+            });
+
+            
+            //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddDistributedMemoryCache();
         }
@@ -66,6 +72,17 @@ namespace _3dSocial.Api
                 app.UseDeveloperExceptionPage();
             }
 
+
+            //app.UseCors(MyAllowSpecificOrigins);
+
+            app.UseCors(
+                options => options.WithOrigins(  
+                    "http://impressaocoletiva.fernandosiebra.com.br"
+                    , "https://impressaocoletiva.fernandosiebra.com.br"
+                ).AllowAnyMethod()
+            );
+
+
             app.UseHttpsRedirection();
 
             app.UseRouting();
@@ -76,9 +93,6 @@ namespace _3dSocial.Api
             {
                 endpoints.MapControllers();
             });
-
-
-            app.UseCors(MyAllowSpecificOrigins);
 
             app.UseSwagger();
             app.UseSwaggerUI(c =>

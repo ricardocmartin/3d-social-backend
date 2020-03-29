@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using _3dSocial.Application.Interfaces;
 using _3dSocial.Domain.Entities;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
