@@ -44,6 +44,14 @@ namespace _3dSocial.Api
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Values API", Version = "v1" });
             });
 
+            services.AddCors(options => {
+                options.AddPolicy("AllowAll",
+                    builder => {
+                        builder.AllowAnyOrigin();
+                    }
+                );
+            });
+
             services.AddDistributedMemoryCache();
         }
 
