@@ -48,7 +48,9 @@ namespace _3dSocial.Api
             services.AddCors(options => {
                 options.AddPolicy(MyAllowSpecificOrigins,
                     builder => {
-                        builder.AllowAnyOrigin();
+                        builder.AllowAnyOrigin()
+                               .AllowAnyMethod()
+                               .AllowAnyHeader();
                     }
                 );
             });
