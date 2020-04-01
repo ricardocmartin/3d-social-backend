@@ -80,6 +80,8 @@ namespace _3dSocial.Api
                     "http://impressaocoletiva.fernandosiebra.com.br"
                     , "https://impressaocoletiva.fernandosiebra.com.br"
                 ).AllowAnyMethod()
+                .AllowAnyHeader()
+                .AllowAnyOrigin()
             );
 
 
