@@ -11,7 +11,7 @@ namespace _3dSocial.Infra.Data.Mapping
         public CenterClassMapper()
         {
             Table("tb_center");
-            
+
             Map(x => x.Id).Column("ID").Key(KeyType.Identity);
             Map(x => x.Created).Column("Created");
             Map(x => x.Modificated).Column("Modificated");

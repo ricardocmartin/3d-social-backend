@@ -8,7 +8,7 @@ using System.Text;
 
 namespace _3dSocial.Application.Facades
 {
-    public class CenterFacade : ICenterFacade
+    public partial class CenterFacade : ICenterFacade
     {
         private BaseService<Center> service = new BaseService<Center>();
 

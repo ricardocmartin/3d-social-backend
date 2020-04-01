@@ -19,6 +19,7 @@ namespace _3dSocial.Infra.Data.Repository
             DapperExtensions.DapperExtensions.SetMappingAssemblies(new[] { typeof(ProjectClassMapper).Assembly });
             DapperExtensions.DapperExtensions.SetMappingAssemblies(new[] { typeof(DemandClassMapper).Assembly });
             DapperExtensions.DapperExtensions.SetMappingAssemblies(new[] { typeof(UserClassMapper).Assembly });
+            DapperExtensions.DapperExtensions.SetMappingAssemblies(new[] { typeof(FileClassMapper).Assembly });
 
             DapperExtensions.DapperExtensions.SqlDialect = new DapperExtensions.Sql.MySqlDialect();
         }

@@ -37,6 +37,7 @@ namespace _3dSocial.Api
             services.AddTransient<IProjectFacade, ProjectFacade>();
             services.AddTransient<IDemandFacade, DemandFacade>();
             services.AddTransient<IUserFacade, UserFacade>();
+            services.AddTransient<IFileFacade, FileFacade>();
 
             services.AddCors();
             /*
