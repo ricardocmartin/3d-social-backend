@@ -16,6 +16,7 @@ namespace _3dSocial.Infra.Data.Mapping
             Map(x => x.CenterID).Column("CenterID");
             Map(x => x.ProjectID).Column("ProjectID");
             Map(x => x.TotalDelivered).Column("TotalDelivered");
+            Map(x => x.Active).Column("Active");
             Map(x => x.TotalNeed).Column("TotalNeed");
             Map(x => x.Observations).Column("Observations");
         }

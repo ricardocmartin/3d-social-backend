@@ -51,15 +51,11 @@ namespace _3dSocial.Application.Facades
                 dto.CenterId = center.Id;
             }
 
-            //if(center.Id == 0)
-            //    centerFacade.Insert(center);
-            //else
-            //    centerFacade.Update(center);
-
-            Demand demand = new Demand() { 
+            Demand demand = new Demand() {
                 CenterID = dto.CenterId,
                 Observations = dto.Observations,
                 ProjectID = dto.ProjectId,
+                Active = true, //TODO: deixar inativo
                 TotalDelivered = dto.TotalDelivered,
                 TotalNeed = dto.TotalNeed
             };

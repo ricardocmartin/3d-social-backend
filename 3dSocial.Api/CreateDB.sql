@@ -47,6 +47,7 @@ CREATE TABLE `tb_demand` (
   `CenterID` int(11) NOT NULL,
   `TotalNeed` int(11) NOT NULL,
   `TotalDelivered` int(11) NOT NULL,
+  `Active` tinyint(1) NOT NULL,
   `Observations` varchar(3000) DEFAULT NULL,
   `Created` datetime DEFAULT CURRENT_TIMESTAMP,
   `Modificated` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
