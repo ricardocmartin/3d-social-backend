@@ -40,17 +40,6 @@ namespace _3dSocial.Api
             services.AddTransient<IFileFacade, FileFacade>();
 
             services.AddCors();
-            /*
-            services.AddCors(options => {
-                options.AddPolicy(MyAllowSpecificOrigins,
-                    builder => {
-                        builder.AllowAnyOrigin()
-                               .AllowAnyMethod()
-                               .AllowAnyHeader();
-                    }
-                );
-            });
-            */
 
             services.AddControllers();
 
@@ -58,9 +47,6 @@ namespace _3dSocial.Api
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Values API", Version = "v1" });
             });
-
-            
-            //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddDistributedMemoryCache();
         }
@@ -73,9 +59,7 @@ namespace _3dSocial.Api
                 app.UseDeveloperExceptionPage();
             }
 
-
-            //app.UseCors(MyAllowSpecificOrigins);
-
+            //TODO: AllowAnyOrigin??
             app.UseCors(
                 options => options.WithOrigins(  
                     "http://impressaocoletiva.fernandosiebra.com.br"

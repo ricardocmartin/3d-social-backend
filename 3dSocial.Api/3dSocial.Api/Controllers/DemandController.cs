@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using _3dSocial.Application.DTO;
 using _3dSocial.Application.Interfaces;
 using _3dSocial.Domain.Entities;
 using Microsoft.AspNetCore.Http;
@@ -51,13 +52,13 @@ namespace _3dSocial.Api.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post([FromBody] Demand item)
+        public IActionResult Post([FromBody] DemandDTO item)
         {
             try
             {
                 facade.Insert(item);
 
-                return new ObjectResult(item.Id);
+                return new ObjectResult(item.DemandId);
             }
             catch (ArgumentNullException ex)
             {
