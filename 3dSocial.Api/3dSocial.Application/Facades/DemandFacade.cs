@@ -11,6 +11,7 @@ namespace _3dSocial.Application.Facades
     {
         private BaseService<Demand> service = new BaseService<Demand>();
         private CenterFacade centerFacade = new CenterFacade();
+        private EmailService emailService = new EmailService();
 
         public Demand Get(int Id)
         {
@@ -43,7 +44,12 @@ namespace _3dSocial.Application.Facades
                     Id = dto.CenterId,
                     Name = dto.CenterName,
                     Street = dto.CenterStreet,
-                    ZipCode = dto.CenterZipCode
+                    ZipCode = dto.CenterZipCode,
+                    State = dto.State,
+                    Phone = dto.Phone,
+                    Ddd = dto.Ddd,
+                    Email = dto.Email,
+                    AllowShowInfo = dto.AllowShowInfo
                 };
                 
                 centerFacade.Insert(center);
@@ -62,7 +68,25 @@ namespace _3dSocial.Application.Facades
 
             service.Post<DemandValidator>(demand);
 
+            emailService.CreteEmailMsg(
+                "Nova demanda cadastrada"
+                , $"Atenção, uma nova demanda foi cadastrada\n\nCentro: {dto.CenterName};\nId do Projeto: {dto.ProjectId}; "
+                , true
+                , EmailsToSend());
+
             dto.DemandId = demand.Id;
+        }
+
+        private List<List<string>> EmailsToSend() {
+
+            List<string> dest = new List<string>();
+            dest.Add("ricardo.cmartin@gmail.com");
+            dest.Add("Ricardo Castro Martin");
+
+            List<List<string>> dests = new List<List<string>>();
+            dests.Add(dest);
+
+            return dests;
         }
 
         public void Delete(int _Id)

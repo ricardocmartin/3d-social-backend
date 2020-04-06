@@ -11,7 +11,7 @@ namespace _3dSocial.Service.Services
         //TODO: Config file???
         private readonly string _from = "ricardo.cmartin@gmail.com";
         private readonly string _fromName = "Impressão Coletiva";
-        private readonly string _sendGridAPILey = "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";
+        private readonly string _sendGridAPIKey = "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";
         private SendGridClient _client = null;
 
         public EmailService(){
@@ -19,7 +19,7 @@ namespace _3dSocial.Service.Services
 
         private SendGridClient getClient() {
             if(_client == null)
-                _client = new SendGridClient(_sendGridAPILey);
+                _client = new SendGridClient(_sendGridAPIKey);
 
             return _client;
         }

@@ -23,6 +23,13 @@ namespace _3dSocial.Infra.Data.Mapping
             Map(x => x.Street).Column("Street");
             Map(x => x.ZipCode).Column("ZipCode");
             Map(x => x.Document).Column("Document");
+
+            Map(x => x.State).Column("State");
+            Map(x => x.Phone).Column("Phone");
+            Map(x => x.Ddd).Column("DDD");
+            Map(x => x.Email).Column("Email");
+            Map(x => x.AllowShowInfo).Column("AllowShowInfo");
+
         }
     }
 }

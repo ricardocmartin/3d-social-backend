@@ -16,6 +16,11 @@ namespace _3dSocial.Application.DTO
         public string CenterCity { get; set; }
         public string CenterZipCode { get; set; }
         public string CenterDocument { get; set; }
+        public string State { get; set; }
+        public string Phone { get; set; }
+        public string Ddd { get; set; }
+        public string Email { get; set; }
+        public bool AllowShowInfo { get; set; }
 
         public int DemandId { get; set; }
         public int TotalNeed { get; set; }
